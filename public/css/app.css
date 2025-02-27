@@ -11,12 +11,16 @@ html, body{
 
 header{
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     height: 100px;
     background-color: #4F6F52;
     box-shadow: 0 0px 5px black;
     width: 100%;
+}
+
+.logo{
+    margin-left: 20px;
 }
 
 footer {

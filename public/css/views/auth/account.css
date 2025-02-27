@@ -1,0 +1,20 @@
+.accountLink {
+    display: inline-block;
+    color: #54C392;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.accountLink:hover {
+    text-decoration: underline;
+}
+
+.accountLink:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(17, 139, 80, 0.3);
+}
+
+.accountLink:active {
+    transform: scale(0.95);
+}

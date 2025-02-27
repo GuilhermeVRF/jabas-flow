@@ -2,4 +2,155 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Ubuntu';
+}
+
+html, body{
+    height: 100%;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    background-color: #4F6F52;
+    box-shadow: 0 0px 5px black;
+    width: 100%;
+}
+
+footer {
+    display: flex;
+    align-items: center; 
+    padding: 20px;
+    border-top: 1px solid gray;
+    height: 60px;
+    width: 100%;
+    justify-content: space-between;
+    background-color: #f8f9fa;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+footer a {
+    color: black;
+    text-decoration: none; 
+    font-size: 14px;
+    transition: color 0.3s ease; 
+}
+
+footer a:hover {
+    color: #118B50;
+    text-decoration: underline;
+}
+
+/* Estilo para dispositivos móveis */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column; 
+        height: auto; 
+        padding: 15px 10px; 
+        text-align: center; 
+    }
+
+    footer a {
+        margin: 5px 0;
+    }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; 
+}
+
+main {
+    flex: 1; 
+    overflow-y: auto; 
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+
+/* Form's classes */
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: solid 1px black;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.label{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+}
+
+i{
+    display: flex;
+    align-items: center;
+}
+
+.form-control {
+    height: 40px;
+    border-radius: 8px; 
+    border: 1px solid #ced4da;
+    width: 100%;
+    appearance: none;
+    padding: 8px 12px; 
+    font-size: 14px; 
+    color: #495057;
+    background-color: #fff; 
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; 
+}
+
+/* Estilo quando o input está em foco */
+.form-control:focus { 
+    outline: none; 
+}
+
+/* Estilo para placeholders */
+.form-control::placeholder {
+    color: #6c757d; 
+    opacity: 1; 
+}
+
+/* Estilo para inputs desabilitados */
+.form-control:disabled {
+    background-color: #e9ecef; 
+    cursor: not-allowed; 
+}
+
+.btn{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.submitBtn{
+    margin-top: 10px;
+    background-color: #118B50;
+    color: white;
 }

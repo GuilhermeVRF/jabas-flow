@@ -3,7 +3,7 @@
 @section('title', 'Login')
 
 @push('styles')
-<link rel="stylesheet" href="{{ asset('css//views/auth/account.css') }}">
+    <link rel="stylesheet" href="{{ asset('css//views/auth/account.css') }}">
     <link rel="stylesheet" href="{{ asset('css//views/auth/login.css') }}">
 @endpush
 
@@ -27,7 +27,7 @@
             <div class="form-group">
                 <input type="submit" value="Entrar" class="btn submitBtn">
             </div>
-            <a href="#" class="accountLink">Não tem uma conta? Cadastre-se</a>
+            <a href="{{ route('register') }}" class="accountLink">Não tem uma conta? Cadastre-se</a>
         </form>
         
     </div>

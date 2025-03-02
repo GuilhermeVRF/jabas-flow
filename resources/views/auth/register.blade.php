@@ -9,7 +9,8 @@
 
 @section('content')
     <div class="registerContainer">
-        <form action="" class="registerForm">
+        <form action="{{ route('user.store') }}" class="registerForm" method="POST">
+            @csrf
             <h1>Crie sua conta</h1>
             <div class="form-group">
                 <label class="label" for="name"><i class="fi fi-rs-user"></i>Nome</label>
@@ -34,6 +35,11 @@
             <div class="form-group">
                 <label class="label" for="password"><i class="fi fi-rs-lock"></i>Senha</label>
                 <input type="password" id="password" name="password" class="form-control" required placeholder="Digite sua senha">
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="password_confirmation"><i class="fi fi-rs-lock"></i>Repita a senha</label>
+                <input type="password" id="password_confirmation" name="password_confirmation" class="form-control" required placeholder="Digite sua senha">
             </div>
 
             <div class="form-group">

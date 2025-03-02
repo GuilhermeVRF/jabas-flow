@@ -16,4 +16,12 @@ class UserController extends Controller{
     public function index(){
         return $this->userService->index();
     }
+
+    public function verifyEmail(){
+        return $this->userService->verifyEmail();
+    }
+
+    public function store(Request $request){
+        return $this->userService->store($request);
+    }
 }

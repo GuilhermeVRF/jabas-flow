@@ -2,8 +2,8 @@
 
 namespace App\Http\Services\Auth;
 
+use App\Http\Requests\Auth\UserRequest;
 use App\Models\User;
-use Illuminate\Http\Request;
 use App\Notifications\VerifyEmail;
 
 class UserService{
@@ -11,7 +11,7 @@ class UserService{
         return view('auth.register');
     }
 
-    public function store(Request $request){
+    public function store(UserRequest $request){
         $user = new User();
         $user->name = $request->name;
         $user->cpfcnpj = $request->cpfcnpj;

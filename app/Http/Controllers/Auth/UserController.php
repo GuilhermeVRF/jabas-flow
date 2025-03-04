@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Auth;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Auth\UserRequest;
 use App\Http\Services\Auth\UserService;
 
 class UserController extends Controller{
@@ -17,11 +17,7 @@ class UserController extends Controller{
         return $this->userService->index();
     }
 
-    public function verifyEmail(){
-        return $this->userService->verifyEmail();
-    }
-
-    public function store(Request $request){
+    public function store(UserRequest $request){
         return $this->userService->store($request);
     }
 }

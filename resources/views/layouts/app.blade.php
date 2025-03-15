@@ -14,6 +14,12 @@
 </head>
 <body>
     <x-header />
+    @if ($errors->any())
+        <x-popup status="error" message="{{ $errors->first() }}" />
+    @endif
+    @if (session('success'))
+        <x-popup status="success" message="{{ session('success') }}" />
+    @endif
     <main>
         @yield('content')
     </main>

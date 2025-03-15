@@ -17,7 +17,7 @@ class UserRequest extends FormRequest
     public function prepareBeforeValidation(): void
     {
         $this->merge([
-            'cpfcnjpj' => preg_replace('/[^0-9]/', '', $this->cpfcnjpj),
+            'cpfcnpj' => preg_replace('/[^0-9]/', '', $this->cpfcnjpj),
             'phone' => preg_replace('/[^0-9]/', '', $this->phone),
         ]);
         
@@ -32,7 +32,7 @@ class UserRequest extends FormRequest
     {
         return [
             'name' => 'required|string|max:255',
-            'cpfcnjpj' => 'required|string|min:11|max:14|unique:users',
+            'cpfcnpj' => 'required|string|min:11|max:14|unique:users',
             'phone' => 'required|string|min:11',
             'password' => 'required|string|min:8|max:255|regex:/^(?=.*[!@#$%^&*()\-_=+{};:,<.>]).+$/',
             'password_confirmation' => 'required|string|same:password',

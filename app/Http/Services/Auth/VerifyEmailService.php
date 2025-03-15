@@ -5,7 +5,7 @@ namespace App\Http\Services\Auth;
 use App\Models\User;
 use App\Http\Requests\Auth\VerifyEmailRequest;
 use App\Http\Requests\Auth\ResendEmailRequest;
-use App\Notifications\VerifyEmail;
+use App\Jobs\SendVerificationEmailJob;
 
 class VerifyEmailService{
     public function index(){
@@ -42,7 +42,7 @@ class VerifyEmailService{
         $user->verification_code_expires_at = now()->addMinutes(30);
         $user->save();
 
-        $user->notify(new VerifyEmail());
+        SendVerificationEmailJob::dispatch($user);
 
         return redirect()->back()->with('success', 'Código de verificação reenviado');
     }

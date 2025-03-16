@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Notifications\VerifyEmail;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Queue\Queueable;
+use Illuminate\Support\Facades\Cache;
 
 class SendVerificationEmailJob implements ShouldQueue
 {
@@ -24,6 +25,7 @@ class SendVerificationEmailJob implements ShouldQueue
      */
     public function handle(): void
     {
+        Cache::put("lastVerifyEmailTime-{$this->user->email}", now(), 1);
         $this->user->notify(new VerifyEmail());
     }
 }

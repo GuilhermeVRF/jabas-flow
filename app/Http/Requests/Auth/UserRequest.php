@@ -55,7 +55,7 @@ class UserRequest extends FormRequest
             'cpfcnjpj.string' => 'O campo CPF/CNPJ deve ser uma string',
             'cpfcnjpj.min' => 'O campo CPF/CNPJ deve ter no mínimo 11 caracteres',
             'cpfcnjpj.max' => 'O campo CPF/CNPJ deve ter no máximo 14 caracteres',
-            'cpfcnjpj.unique' => 'CPF/CNPJ já cadastrado',
+            'cpfcnpj.unique' => 'CPF/CNPJ já cadastrado',
             'phone.required' => 'O campo telefone é obrigatório',
             'phone.string' => 'O campo telefone deve ser uma string',
             'phone.min' => 'O campo telefone deve ter no mínimo 11 caracteres',

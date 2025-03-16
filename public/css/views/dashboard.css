@@ -1,0 +1,14 @@
+.dashboardContainer{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    padding: 60px;
+    gap: 50px;
+}
+
+.dashboard-title{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}

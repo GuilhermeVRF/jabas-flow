@@ -1,0 +1,12 @@
+.dashboard-filter{
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+}
+
+.dashboard-filter form{
+    display: flex;
+    align-items: end;
+    width: 100%;
+    gap: 10px;
+}

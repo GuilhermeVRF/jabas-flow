@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="{{ asset('css/components/sidebar.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     @stack('styles')
-    @stack('scripts')
 </head>
 <body>
     @if ($errors->any())
@@ -26,5 +25,6 @@
             @yield('content')
         </div>
     </main>
+    @stack('scripts')
 </body>
 </html>

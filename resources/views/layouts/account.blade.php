@@ -8,12 +8,12 @@
     </title>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css'>
     <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
-    <link rel="stylesheet" href="{{ asset('css/components/sidebar.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     @stack('styles')
     @stack('scripts')
 </head>
 <body>
+    <x-header />
     @if ($errors->any())
         <x-popup status="error" message="{{ $errors->first() }}" />
     @endif
@@ -21,10 +21,14 @@
         <x-popup status="success" message="{{ session('success') }}" />
     @endif
     <main>
-        <div class="content">
-            <x-sidebar />
-            @yield('content')
-        </div>
+        @yield('content')
     </main>
+    <footer>
+        <p>Feito por <span>Jabas</span> com <span>♥</span></p>
+        <div>
+            <a href="https://www.flaticon.com/uicons">Uicons by Flaticon</a>
+            <a href="https://storyset.com/online">Online illustrations by Storyset</a>
+        </div>
+    </footer>
 </body>
 </html>

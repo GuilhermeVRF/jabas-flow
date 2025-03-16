@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.account')
 
 @section('title', 'Login')
 
@@ -12,7 +12,8 @@
         <div class="imageContainer">
             <img src="{{ asset('images/login.svg') }}" alt="Login">
         </div>
-        <form class="loginForm">
+        <form class="loginForm" method="POST" action="{{ route('user.login') }}">
+            @csrf
             <h1>Bem vindo de volta!</h1>
             <div class="form-group">
                 <label class ="label" for="email"><i class="fi fi-rs-envelope"></i>E-mail</label>

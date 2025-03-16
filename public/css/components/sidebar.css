@@ -2,7 +2,6 @@ aside{
     height: 100vh;
     width: 250px;
     background-color: #F7F7F7;
-    position: fixed;
     transition: all 0.5s;
 }
 

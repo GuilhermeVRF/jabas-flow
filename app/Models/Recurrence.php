@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Recurrence extends Model
 {
     protected $fillable = [
-        'day',
+        'date',
         'times',
         'frequency',
     ];

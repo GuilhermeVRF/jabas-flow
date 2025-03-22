@@ -27,6 +27,6 @@ class LoginService{
 
         Auth::login($user);
 
-        return redirect()->back()->with('success', 'Login efetuado com sucesso');
+        return redirect()->route('dashboard')->with('success', 'Login efetuado com sucesso');
     }
 }

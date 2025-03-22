@@ -29,7 +29,7 @@ class BudgetService
 
         if($request->isRecurrence){
             $recurrence = Recurrence::create([
-                'day' => date('d', strtotime($request->recurrenceDate)),
+                'date' => $request->recurrenceDate,
                 'frequency' => $request->recurrenceType,
                 'times' => $request->recurrenceAmount,
             ]);

@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('recurrences', function (Blueprint $table) {
             $table->id();
-            $table->integer('day');
+            $table->date('date');
             $table->integer('times');
             $table->integer('counter')->default(1);
             $table->enum('frequency', ['daily', 'weekly', 'monthly', 'yearly']);    

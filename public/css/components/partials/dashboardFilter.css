@@ -10,7 +10,7 @@
     display: flex;
     flex-direction: row;
     gap: 20px;
-    width: 100%;
+    width: 75%;
 }
 
 .dashboard-filter form{

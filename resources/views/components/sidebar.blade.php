@@ -13,5 +13,12 @@
                 <span class="sidebar-item__text">Dashboard</span>
             </a>
         </li>
+
+        <li class="sidebar-item {{ Route::is('budget.create') ? 'active' : '' }}">
+            <a class="sidebar-item__link" href="{{ route('budget.create') }}">
+                <i class="fi fi-rs-checklist-task-budget"></i>
+                <span class="sidebar-item__text">Adicionar Orçamento</span>
+            </a>
+        </li>
     </ul>
 </aside>

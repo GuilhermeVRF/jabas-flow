@@ -1,5 +1,5 @@
 aside{
-    width: 250px;
+    width: 300px;
     background-color: #F7F7F7;
     transition: all 0.5s;
 }
@@ -35,12 +35,16 @@ aside{
     border: solid 1px #E0E0E0;
 }
 
+.sidebar-item.active > .sidebar-item__link{
+    color: #118B50;
+}
+
 .sidebar-item__link{
     display: flex;
     gap: 10px;
     text-decoration: none;
     cursor: pointer;
-    color: #118B50;
+    color: black;
 }
 
 .sidebar-minimize{

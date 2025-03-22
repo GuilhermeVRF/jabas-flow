@@ -1,0 +1,52 @@
+.upsertBudgetContainer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    padding: 60px;
+}
+
+.upsertBudgetForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 75%;
+    height: 50%;
+}
+
+.recurrenceContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    border-top: solid 1px #ddd; 
+    padding-top: 10px;
+}
+
+.recurrenceContainer h2{
+    text-align: center;
+}
+
+@media screen and (max-width: 1280px) {
+    .upsertBudgetContainer{
+        padding: 10px;
+    }
+
+    .upsertBudgetForm{
+        width: 100%;
+        height: 100%;
+    }
+
+    .upsertBudgetForm h1{
+        font-size: 1.5rem;
+    }
+
+    .upsertBudgetContainer h2{
+        font-size: 1.3rem;
+    }
+}

@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->integer('day');
             $table->integer('times');
-            $table->integer('counter');
+            $table->integer('counter')->default(1);
             $table->enum('frequency', ['daily', 'weekly', 'monthly', 'yearly']);    
             $table->timestamps();
         });

@@ -15,5 +15,5 @@
         <button class="btn-small secondaryBtn"><i class="fi fi-rs-filter"></i></button>
     </div>
     
-    <button class="btn submitBtn">Adicionar Orçamento</button>
+    <a href="{{ route('budget.create') }}" class="btn submitBtn">Adicionar Orçamento</a>
 </div>

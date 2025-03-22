@@ -1,5 +1,4 @@
 aside{
-    height: 100vh;
     width: 250px;
     background-color: #F7F7F7;
     transition: all 0.5s;
@@ -21,14 +20,12 @@ aside{
     display: flex;
     flex-direction: column;
     list-style: none;
-    height: 100vh;
     padding: 0;
     margin: 0;
     padding: 10px;
 }
 
 .sidebar-item{
-    color: #585A5C;
     padding: 10px;
     border-radius: 5px;
 }
@@ -43,7 +40,7 @@ aside{
     gap: 10px;
     text-decoration: none;
     cursor: pointer;
-    color: #585A5C;
+    color: #118B50;
 }
 
 .sidebar-minimize{

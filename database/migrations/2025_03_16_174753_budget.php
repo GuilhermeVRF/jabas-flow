@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->decimal('amount', 10, 2);
             $table->date('billing_date');
+            $table->enum('type', ['expense', 'income']);
             $table->enum('status', ['canceled', 'pending', 'paid']);
             $table->text('description')->nullable();
             $table->unsignedBigInteger('user_id');

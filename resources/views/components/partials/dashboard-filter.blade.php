@@ -3,18 +3,17 @@
 @endpush
 
 <div class="dashboard-filter">
-    <form action="{{ route('dashboard') }}" method="GET">
-        <!-- Filtro por Intervalo de Datas -->
-        <div class="form-group">
-            <label for="starting_date">Data inicial</label>
-            <input type="date" id="starting_date" name="starting_date" class="form-control" value="{{ $selectedStartDate }}">
-        </div>
-        <div class="form-group">
-            <label for="ending_date">Data final</label>
-            <input type="date" id="ending_date" name="ending_date" class="form-control" value="{{ $selectedEndDate }}">
-        </div>
+    <div class="dashboard-filter-container">
+        <form class="dashboard-search" action="{{ route('dashboard') }}" method="GET">
+            <!-- Filtro por Intervalo de Datas -->
+            <div class="form-group">
+                <input type="text" id="search" name="search" class="form-control" placeholder="Pesquisar por Nome..." value="{{ $search }}">
+            </div>    
+            <button type="submit" class="btn-small submitBtn"><i class="fi fi-rs-search"></i></button>
+        </form>
 
-        <!-- Botão para Aplicar Filtro -->
-        <button type="submit" class="btn submitBtn">Aplicar Filtro</button>
-    </form>
+        <button class="btn-small secondaryBtn"><i class="fi fi-rs-filter"></i></button>
+    </div>
+    
+    <button class="btn submitBtn">Adicionar Orçamento</button>
 </div>

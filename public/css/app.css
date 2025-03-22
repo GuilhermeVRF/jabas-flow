@@ -76,7 +76,6 @@ main {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 100%;
 }
 
 /* Form's classes */
@@ -141,19 +140,40 @@ i{
     cursor: not-allowed; 
 }
 
+.btn-small{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
 .btn{
-    width: 100%;
     height: 40px;
     border: none;
     border-radius: 5px;
     font-size: 1.2em;
     cursor: pointer;
+    padding: 5px;
 }
 
 .submitBtn{
-    margin-top: 10px;
     background-color: #118B50;
     color: white;
+}
+
+.secondaryBtn{
+    background-color: transparent;
+    border: solid 1px #888;
+    transition: 0.3s;
+}
+
+.secondaryBtn:hover{
+    background-color: #d1d1d1;
 }
 
 .popup{

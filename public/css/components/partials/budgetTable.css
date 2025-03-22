@@ -1,0 +1,188 @@
+.budget-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.budget-header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: #f4f4f4;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 0;
+    border-bottom: 2px solid #ddd;
+}
+
+.budget-th {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.budget-body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.budget-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.budget-td {
+    flex: 1;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.budget-td-text {
+    position: relative;
+    max-width: 200px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.budget-td-text::after {
+    content: attr(data-text);
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 4px;
+    white-space: normal; 
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out;
+    z-index: 1;
+    width: max-content; 
+    max-width: 250px; 
+}
+
+.budget-td-text:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.budget-row:hover {
+    background-color: #f9f9f9;
+}
+
+.budget-status, .budget-type {
+    display: inline-block;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    min-width: 100px;
+}
+
+.budget-type.expense {
+    background-color: red;
+    color: white;
+}
+
+.budget-type.income {
+    background-color: #47c363;
+    color: white;
+}
+
+.budget-status.canceled {
+    background-color: red;
+    color: white;
+}
+
+.budget-status.pending {
+    background-color: #ffc107;
+    color: white;
+}
+
+.budget-status.paid {
+    background-color: #47c363;
+    color: white;
+}
+
+.budget-td-actions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.budget-td-action {
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: solid 1px #DCDCDC;
+    text-decoration: none;
+    color: black;
+    background-color: #F6F6F6;
+    cursor: pointer;
+}
+
+.budget-td-action::after {
+    content: attr(data-tooltip); 
+    position: absolute;
+    bottom: -30px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out;
+    z-index: 1;
+}
+
+.budget-td-action:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media screen and (max-width: 1280px) {
+    .budget-status, .budget-type{
+        padding: 0px;
+    }
+    
+    
+    .budget-header {
+        display: none;
+    }
+
+    .budget-row {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .budget-td {
+        text-align: left;
+        padding: 10px;
+    }
+
+    .budget-td:before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        margin-right: 10px;
+    }   
+}

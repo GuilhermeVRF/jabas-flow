@@ -13,9 +13,11 @@
         </div>
 
         <x-partials.dashboard-filter 
-            :selectedStartDate="$selectedStartDate"
-            :selectedEndDate="$selectedEndDate"
+            :search="$search"
         />
         
+        <div class="budgets">
+            <x-partials.budget-table :budgets="$budgets" />
+        </div>
     </div>
 @endsection

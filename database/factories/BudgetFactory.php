@@ -22,6 +22,7 @@ class BudgetFactory extends Factory
             'name' => $this->faker->sentence(3), 
             'amount' => $this->faker->randomFloat(2, 10, 1000), 
             'billing_date' => $this->faker->dateTimeBetween('-1 year', '+1 year'), 
+            'type' => $this->faker->randomElement(['expense', 'income']),
             'status' => $this->faker->randomElement(['canceled', 'pending', 'paid']), 
             'description' => $this->faker->paragraph,
             'user_id' => User::first()->id, 

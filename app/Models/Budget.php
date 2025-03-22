@@ -13,6 +13,7 @@ class Budget extends Model
         'name',
         'amount',
         'billing_date',
+        'type',
         'status',
         'description',
         'user_id',

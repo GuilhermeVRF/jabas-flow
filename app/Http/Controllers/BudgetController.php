@@ -17,7 +17,15 @@ class BudgetController extends Controller
         return $this->budgetService->create();
     }
 
+    public function edit($id){
+        return $this->budgetService->edit($id);
+    }
+
     public function store(BudgetRequest $request){
         return $this->budgetService->store($request);
+    }
+
+    public function update(BudgetRequest $request, $id){
+        return $this->budgetService->update($request, $id);
     }
 }

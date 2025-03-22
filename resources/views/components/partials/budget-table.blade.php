@@ -33,7 +33,7 @@
                     </span>
                 </div>
                 <div class="budget-td" data-label="Valor">R$ {{ number_format($budget->amount, 2, ',', '.') }}</div>
-                <div class="budget-td" data-label="Data de Cobrança">{{ date('d/m/Y', strtotime($budget->billing_date)) }}</div>
+                <div class="budget-td" data-label="Data">{{ date('d/m/Y', strtotime($budget->billing_date)) }}</div>
                 <div class="budget-td" data-label="Status">
                     <span class="budget-status {{ strtolower($budget->status) }}">
                         @php
@@ -57,7 +57,7 @@
                 </div>
                 <div class=" budget-td budget-td-actions">
                     <a class="budget-td-action" href="" data-tooltip="Visualizar"><i class="fi fi-rs-eye"></i></a>
-                    <a class="budget-td-action" href="" data-tooltip="Editar"><i class="fi fi-rs-edit"></i></a>
+                    <a class="budget-td-action" href="{{ route('budget.edit', $budget->id) }}" data-tooltip="Editar"><i class="fi fi-rs-edit"></i></a>
                     <a class="budget-td-action" href="" data-tooltip="Deletar"><i class="fi fi-rs-trash"></i></a>    
                 </div>
             </div>

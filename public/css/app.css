@@ -48,7 +48,12 @@ footer a:hover {
 }
 
 /* Estilo para dispositivos móveis */
-@media (max-width: 768px) {
+@media (max-width: 1280px) {
+    .content{
+        min-height: auto; 
+        height: auto; 
+    }
+
     footer {
         flex-direction: column; 
         height: auto; 
@@ -76,6 +81,7 @@ main {
     display: flex;
     flex-direction: row;
     width: 100%;
+    min-height: 100vh;
 }
 
 /* Form's classes */

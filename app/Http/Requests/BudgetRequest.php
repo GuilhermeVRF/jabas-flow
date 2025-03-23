@@ -29,7 +29,7 @@ class BudgetRequest extends FormRequest
             'billingDate' => 'required|date',
             'description' => 'nullable|string',
             'status' => 'required|in:pending,paid',
-            'recurrenceDate' => 'required_if:isRecurrence,true|date',
+            'recurrenceDate' => 'required_if:isRecurrence,true|nullable|date',
             'recurrenceType' => 'required_if:isRecurrence,true|in:daily,weekly,monthly,yearly',
             'recurrenceAmount' => 'required_if:isRecurrence,true|nullable|numeric',
         ];

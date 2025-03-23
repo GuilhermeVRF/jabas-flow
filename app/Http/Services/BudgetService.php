@@ -60,7 +60,7 @@ class BudgetService
             'user_id' => auth()->user()->id,
         ]);
         
-        if($request->isRecurrence){
+        if($request->boolean('isRecurrence')){
             $recurrence = Recurrence::updateOrCreate(
                 ['id' => $budget->recurrence_id],
             [

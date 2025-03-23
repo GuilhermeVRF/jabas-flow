@@ -33,7 +33,7 @@
                 <label for="category">Categoria</label>
                 <select name="category" id="category" class="form-control">
                     @foreach($categories as $category)
-                        <option @if($budget->category->id === category->id) selected @endif value="{{ $category->id }}">{{ $category->name }}</option>
+                        <option @if(!empty($budget->category->id) && $budget->category->id === $category->id) selected @endif value="{{ $category->id }}">{{ $category->name }}</option>
                     @endforeach
                 </select>
             </div>

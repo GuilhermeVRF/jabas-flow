@@ -4,4 +4,11 @@
     flex-direction: column;
     width: 100%;
     gap: 10px;
+    font-size: 1.2em;
+}
+
+.budget-popup__content textarea{
+    width: 100%;
+    height: 100px;
+    resize: none;
 }

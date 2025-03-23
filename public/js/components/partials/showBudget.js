@@ -56,6 +56,7 @@ function mountBudgetPopup(budget){
 
     if(budget.description){
         showBudgetPopupContent.innerHTML += `
+            <h4>Descrição</h4>
             <textarea disabled>${budget.description}</textarea>
         `;
     }

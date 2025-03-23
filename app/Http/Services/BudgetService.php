@@ -6,6 +6,7 @@ use App\Http\Requests\BudgetRequest;
 use App\Models\Budget;
 use App\Models\Category;
 use App\Models\Recurrence;
+use App\Utils\BudgetUtils;
 
 class BudgetService
 {
@@ -23,6 +24,9 @@ class BudgetService
 
     public function show($id){
         $budget = Budget::where('user_id', auth()->user()->id)->with('recurrence', 'category')->findOrFail($id);
+        $budget->type = BudgetUtils::formatType($budget->type);
+        $budget->status = BudgetUtils::formatStatus($budget->status);
+        $budget->amount = BudgetUtils::formatAmount($budget->amount);
         return response()->json($budget);
     }
 

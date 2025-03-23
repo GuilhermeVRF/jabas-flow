@@ -46,13 +46,11 @@ function mountBudgetPopup(budget){
         year: 'numeric'
     });
 
-
-
     showBudgetPopupContent.innerHTML = `
         <h2>${budget.name}</h2>
         <div>Tipo: ${budget.type}</div>
         <div>Status: ${budget.status}</div>
-        <div>Total: R$ ${budget.amount}</div>
+        <div>Total: ${budget.amount}</div>
         <div>Data de cobrança: ${formattedDate}</div>
     `;
 

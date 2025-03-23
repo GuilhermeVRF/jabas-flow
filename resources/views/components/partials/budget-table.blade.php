@@ -18,17 +18,7 @@
                 <div class="budget-td" data-label="Tipo">
                     <span class="budget-type {{ strtolower($budget->type) }}">
                     @php
-                        switch ($budget->type) {
-                            case 'income':
-                                echo 'Receita';
-                                break;
-                            case 'expense':
-                                echo 'Despesa';
-                                break;
-                            default:
-                                echo 'Desconhecido';
-                                break;
-                        }
+                        echo App\Utils\BudgetUtils::formatType($budget->type);
                     @endphp
                     </span>
                 </div>
@@ -37,21 +27,7 @@
                 <div class="budget-td" data-label="Status">
                     <span class="budget-status {{ strtolower($budget->status) }}">
                         @php
-                            switch ($budget->status) {
-                                case 'paid':
-                                    echo 'Pago';
-                                    break;
-                                case 'pending':
-                                    echo 'Pendente';
-                                    break;
-                                case 'canceled':
-                                    echo 'Cancelado';
-                                    break;
-                                default:
-                                    echo 'Desconhecido';
-                                    break;
-                            }    
-
+                            echo App\Utils\BudgetUtils::formatStatus($budget->status);
                         @endphp
                     </span>
                 </div>

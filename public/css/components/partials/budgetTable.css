@@ -88,7 +88,7 @@
 }
 
 .budget-type.expense {
-    background-color: red;
+    background-color: #F95454;
     color: white;
 }
 
@@ -98,7 +98,7 @@
 }
 
 .budget-status.canceled {
-    background-color: red;
+    background-color: #F95454;
     color: white;
 }
 
@@ -184,5 +184,9 @@
         float: left;
         font-weight: bold;
         margin-right: 10px;
-    }   
+    }  
+    
+    .budget-td-actions{
+        justify-content: start;
+    }
 }

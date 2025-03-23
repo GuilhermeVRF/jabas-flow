@@ -11,3 +11,49 @@
     justify-content: flex-start;
     width: 100%;
 }
+
+.budget-amount-information{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    gap: 20px;
+}
+
+.budget-amount-information > div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    border-radius: 5px;
+    border: solid 1px #ddd;
+    padding: 20px;
+}
+
+.budget-amount-information__percent{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 5px;
+    border-radius: 10px;
+    max-width: 110px;
+    color: white;
+}
+
+.budget-amount-information__percent.positive{
+    background-color: #47c363;
+}
+
+.budget-amount-information__percent.negative{
+    background-color: #F95454;
+}
+
+@media screen and (max-width: 1280px) {
+    .budget-amount-information{
+        flex-direction: column;
+    }
+
+    .budget-amount-information > div{
+        padding: 10px;
+    }
+}

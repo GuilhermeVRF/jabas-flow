@@ -9,7 +9,7 @@
 @section('content')
     <div class="dashboardContainer">
         <div class="dashboard-title">
-            <h1>Dashboard</h1>   
+            <h1>Dashboard - {{ App\Utils\Utils::getPortugueseActualMonth() }}</h1>   
         </div>
 
         <x-partials.dashboard-summary 

@@ -56,7 +56,7 @@
                     </span>
                 </div>
                 <div class=" budget-td budget-td-actions">
-                    <a class="budget-td-action" href="" data-tooltip="Visualizar"><i class="fi fi-rs-eye"></i></a>
+                    <a class="budget-td-action show-budget" href="#" data-tooltip="Visualizar" data-id="{{ $budget->id }}"><i class="fi fi-rs-eye"></i></a>
                     <a class="budget-td-action" href="{{ route('budget.edit', $budget->id) }}" data-tooltip="Editar"><i class="fi fi-rs-edit"></i></a>
                     <a class="budget-td-action" href="" data-tooltip="Deletar"><i class="fi fi-rs-trash"></i></a>    
                 </div>

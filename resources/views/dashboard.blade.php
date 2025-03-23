@@ -27,5 +27,7 @@
         <div class="budgets">
             <x-partials.budget-table :budgets="$budgets" />
         </div>
+
+        <x-partials.show-budget />
     </div>
 @endsection

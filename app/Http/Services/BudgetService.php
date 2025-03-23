@@ -21,6 +21,11 @@ class BudgetService
         return view('budget.edit', compact('budget', 'categories'));
     }
 
+    public function show($id){
+        $budget = Budget::where('user_id', auth()->user()->id)->with('recurrence', 'category')->findOrFail($id);
+        return response()->json($budget);
+    }
+
     public function store(BudgetRequest $request){
         $budget = Budget::create([
             'name' => $request->name,

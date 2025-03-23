@@ -28,4 +28,5 @@ Route::middleware('auth')->group(function () {
     Route::post('/budget/store', [BudgetController::class, 'store'])->name('budget.store');
     Route::get('/budget/edit/{id}', [BudgetController::class, 'edit'])->name('budget.edit');
     Route::put('/budget/update/{id}', [BudgetController::class, 'update'])->name('budget.update');
+    Route::get('/budget/show/{id}', [BudgetController::class, 'show'])->name('budget.show');
 });

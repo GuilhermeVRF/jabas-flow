@@ -8,6 +8,7 @@
         <div class="header-cell">Nome</div>
         <div class="header-cell">Tipo</div>
         <div class="header-cell">Valor</div>
+        <div class="header-cell">Categoria</div>
         <div class="header-cell">Data de Cobrança</div>
         <div class="header-cell">Status</div>
         <div class="header-cell">Ações</div>
@@ -24,6 +25,7 @@
                     </span>
                 </div>
                 <div class="cell" data-label="Valor">R$ {{ number_format($budget->amount, 2, ',', '.') }}</div>
+                <div class="cell" data-label="Categoria" style="color: {{ $budget->category->color ?? '#000000 '}}">{{ $budget->category->name ?? '' }}</div>
                 <div class="cell" data-label="Data">{{ date('d/m/Y', strtotime($budget->billing_date)) }}</div>
                 <div class="cell" data-label="Status">
                     <span class="budget-status {{ strtolower($budget->status) }}">

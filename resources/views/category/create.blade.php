@@ -19,8 +19,7 @@
 
             <div class="form-group">
                 <label for="color">Cor</label>
-                <div class="color-picker"></div>
-                <input type="hidden" name="color" id="color" value="#000000">
+                <x-partials.input-color color="#000000" :previewUserColors="$previewUserColors"/>
             </div>
 
             <div class="button-group">
@@ -33,6 +32,5 @@
 
 @push('scripts')
     <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
-    <script src="{{ asset('js/views/category/upsert.js') }}"></script>
 @endpush
 

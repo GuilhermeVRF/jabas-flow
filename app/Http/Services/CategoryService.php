@@ -27,14 +27,19 @@ class CategoryService{
     }
 
     public function create(){
-        return view('category.create');
+        $previewUserColors = Category::where('user_id', auth()->user()->id)->distinct()->pluck('color')->toArray();
+        return view('category.create', [
+            'previewUserColors' => $previewUserColors,
+        ]);
     }
 
     public function edit($id){
         $category = Category::where('user_id', auth()->user()->id)->findOrFail($id);
+        $previewUserColors = Category::where('user_id', auth()->user()->id)->distinct()->pluck('color')->toArray();
 
         return view('category.edit', [
-            'category' => $category
+            'category' => $category,
+            'previewUserColors' => $previewUserColors,
         ]);
     }
 
@@ -77,6 +82,17 @@ class CategoryService{
         ]);
 
         return redirect()->back()->with('success', 'Categoria atualizada com sucesso');
+    }
+
+    public function destroy($id){
+        $category = Category::where('user_id', auth()->user()->id)->findOrFail($id);
+
+        // Remove o orçamento das categorias
+        $category->budgets()->update(['category_id' => null]);
+
+        $category->delete();
+
+        return redirect()->back()->with('success', 'Categoria deletada com sucesso');
     }
 
     private function getCategoriesRelatedToBudgetsCount($search){

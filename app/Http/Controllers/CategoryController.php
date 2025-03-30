@@ -34,4 +34,8 @@ class CategoryController extends Controller
     public function update(CategoryRequest $request, $id){
         return $this->categoryService->update($request, $id);
     }
+
+    public function destroy($id){
+        return $this->categoryService->destroy($id);
+    }
 }

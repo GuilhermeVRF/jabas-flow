@@ -20,5 +20,12 @@
                 <span class="sidebar-item__text">Adicionar Orçamento</span>
             </a>
         </li>
+
+        <li class="sidebar-item {{ Route::is('category.index') ? 'active' : '' }}">
+            <a class="sidebar-item__link" href="{{ route('category.index') }}">
+                <i class="fi fi-rs-category"></i>
+                <span class="sidebar-item__text">Categorias</span>
+            </a>
+        </li>
     </ul>
 </aside>

@@ -7,6 +7,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\UserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\BudgetController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
 
 Route::get('/', function () {
@@ -29,4 +30,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/budget/edit/{id}', [BudgetController::class, 'edit'])->name('budget.edit');
     Route::put('/budget/update/{id}', [BudgetController::class, 'update'])->name('budget.update');
     Route::get('/budget/show/{id}', [BudgetController::class, 'show'])->name('budget.show');
+    Route::get('/categories', [CategoryController::class, 'index'])->name('category.index');
+    Route::get('/category/create', [CategoryController::class, 'create'])->name('category.create');
+    Route::post('/category/store', [CategoryController::class, 'store'])->name('category.store');
 });

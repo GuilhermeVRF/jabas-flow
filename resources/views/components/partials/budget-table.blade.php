@@ -1,5 +1,5 @@
 @push('styles')
-<link rel="stylesheet" href="{{ asset('css/components/partials/table.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/components/partials/table.css') }}">
     <link rel="stylesheet" href="{{ asset('css/components/partials/budgetTable.css') }}">
 @endpush
 

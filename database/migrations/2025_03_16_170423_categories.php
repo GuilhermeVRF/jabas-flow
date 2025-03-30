@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('parent_id')->nullable();
             $table->string('name');
+            $table->string('color', 7)->default('#000000');
             $table->unsignedBigInteger("user_id");
             $table->timestamps();
 

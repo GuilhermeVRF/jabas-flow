@@ -49,6 +49,7 @@ function mountBudgetPopup(budget){
     showBudgetPopupContent.innerHTML = `
         <h2>${budget.name}</h2>
         <div>Tipo: ${budget.type}</div>
+        <div>Categoria: <span style="color:${budget.category.color}">${budget.category.name}</span></div>
         <div>Status: ${budget.status}</div>
         <div>Total: ${budget.amount}</div>
         <div>Data de cobrança: ${formattedDate}</div>

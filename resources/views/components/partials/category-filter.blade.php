@@ -11,8 +11,6 @@
             </div>    
             <button type="submit" class="btn-small submitBtn"><i class="fi fi-rs-search"></i></button>
         </form>
-
-        <button class="btn-small secondaryBtn"><i class="fi fi-rs-filter"></i></button>
     </div>
     
     <a href="{{ route('category.create') }}" class="btn submitBtn">Adicionar Categoria</a>

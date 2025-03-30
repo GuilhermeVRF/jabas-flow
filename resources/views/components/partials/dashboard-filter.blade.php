@@ -1,9 +1,9 @@
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('css/components/partials/dashboardFilter.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/components/partials/filter.css') }}">
 @endpush
 
-<div class="dashboard-filter">
-    <div class="dashboard-filter-container">
+<div class="filter">
+    <div class="filter-container">
         <form class="dashboard-search" action="{{ route('dashboard') }}" method="GET">
             <!-- Filtro por Intervalo de Datas -->
             <div class="form-group">

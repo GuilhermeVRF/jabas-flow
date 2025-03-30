@@ -1,4 +1,4 @@
-.dashboard-filter{
+.filter{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -6,14 +6,14 @@
     gap: 20px;
 }
 
-.dashboard-filter-container{
+.filter-container{
     display: flex;
     flex-direction: row;
     gap: 20px;
     width: 75%;
 }
 
-.dashboard-filter form{
+.filter form{
     display: flex;
     align-items: end;
     width: 50%;
@@ -21,17 +21,17 @@
 }
 
 @media screen and (max-width: 1280px) {
-    .dashboard-filter{
+    .filter{
         flex-direction: column;
         align-items: start;
     }
 
-    .dashboard-filter-container{
+    .filter-container{
         flex-direction: column;
         width: 100%;
     }
  
-    .dashboard-filter form{
+    .filter form{
         width: 100%;
     }
 }

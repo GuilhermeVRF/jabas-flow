@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\RecurrenceRequest;
 use App\Http\Services\RecurrenceService;
 use Illuminate\Http\Request;
 
@@ -21,5 +22,10 @@ class RecurrenceController extends Controller
 
     public function edit($id){
         return $this->recurrenceService->edit($id);
+    }
+
+    public function update(RecurrenceRequest $request, $id)
+    {
+        return $this->recurrenceService->update($request, $id);
     }
 }

@@ -23,7 +23,7 @@
 
         <li class="sidebar-item {{ Route::is('recurrence.*') ? 'active' : '' }}">
             <a class="sidebar-item__link" href="{{ route('recurrence.index') }}">
-                <i class="fi fi-rs-category"></i>
+                <i class="fi fi-rs-loop-square"></i>
                 <span class="sidebar-item__text">Recorrências</span>
             </a>
         </li>

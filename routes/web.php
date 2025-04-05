@@ -39,4 +39,5 @@ Route::middleware('auth')->group(function () {
     Route::get('/category/destroy/{id}', [CategoryController::class, 'destroy'])->name('category.destroy');
     Route::get('/recurrences', [RecurrenceController::class, 'index'])->name('recurrence.index');
     Route::get('/recurrence/edit/{id}', [RecurrenceController::class, 'edit'])->name('recurrence.edit');
+    Route::put('/recurrence/update/{id}', [RecurrenceController::class, 'update'])->name('recurrence.update');
 });

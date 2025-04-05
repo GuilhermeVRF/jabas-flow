@@ -85,6 +85,11 @@
                     <label for="recurrenceAmount">Quantidade de recorrências</label>
                     <input type="number" class="form-control" id="recurrenceAmount" name="recurrenceAmount" placeholder="Quantidade de recorrências" value={{ $budget->recurrence->times ?? '' }}>
                 </div>
+
+                <div class="form-group">
+                    <label for="recurrenceCounter">Contador de recorrência</label>
+                    <input type="number" class="form-control" id="recurrenceCounter" name="recurrenceCounter" placeholder="Recorrência atual" value={{ $budget->recurrence->counter ?? '' }}>
+                </div>
             </div>
 
             <div class="button-group">

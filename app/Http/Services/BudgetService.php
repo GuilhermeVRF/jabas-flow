@@ -76,6 +76,7 @@ class BudgetService
                 'date' => $request->recurrenceDate,
                 'frequency' => $request->recurrenceType,
                 'times' => $request->recurrenceAmount,
+                'counter' => $request->recurrenceCounter ?? 0
             ]);
 
             $budget->recurrence_id = $recurrence->id;

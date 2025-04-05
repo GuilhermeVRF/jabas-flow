@@ -31,7 +31,8 @@ class BudgetRequest extends FormRequest
             'status' => 'required|in:pending,paid',
             'recurrenceDate' => 'required_if:isRecurrence,true|nullable|date',
             'recurrenceType' => 'required_if:isRecurrence,true|in:daily,weekly,monthly,yearly',
-            'recurrenceAmount' => 'required_if:isRecurrence,true|nullable|numeric',
+            'recurrenceAmount' => 'required_if:isRecurrence,true|nullable|numeric|min:1',
+            'recurrenceCounter' => 'nullable|numeric|min:1',
         ];
     }
 
@@ -65,6 +66,9 @@ class BudgetRequest extends FormRequest
             'recurrenceType.in' => 'O campo tipo de recorrência deve ser diário, semanal, mensal ou anual',
             'recurrenceAmount.required_if' => 'O campo valor de recorrência é obrigatório',
             'recurrenceAmount.numeric' => 'O campo valor de recorrência deve ser um número',
+            'recurrenceAmount.min' => 'O campo valor de recorrência deve ser maior que 0',
+            'recurrenceCounter.numeric' => 'O campo contador de recorrência deve ser um número',
+            'recurrenceCounter.min' => 'O campo contador de recorrência deve ser maior que 0',
         ];
     }
 }

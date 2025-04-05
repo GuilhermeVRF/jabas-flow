@@ -15,7 +15,7 @@
         @foreach ($recurrences as $recurrence)
             <div class="table-row">
                 <div class="cell">{{ $recurrence->budget->name }}</div>
-                <div class="cell">{{ $recurrence->date }}</div>
+                <div class="cell">{{ date('d/m/Y', strtotime($recurrence->date)) }}</div>
                 <div class="cell">{{ App\Utils\RecurrenceUtils::formatFrequency($recurrence->frequency) }}</div>
                 <div class="cell">{{ $recurrence->counter }}</div>
                 <div class="cell">{{ $recurrence->times }}</div>

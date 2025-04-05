@@ -14,11 +14,11 @@
     <div class="table-body">
         @foreach ($recurrences as $recurrence)
             <div class="table-row">
-                <div class="cell">{{ $recurrence->budget->name }}</div>
-                <div class="cell">{{ date('d/m/Y', strtotime($recurrence->date)) }}</div>
-                <div class="cell">{{ App\Utils\RecurrenceUtils::formatFrequency($recurrence->frequency) }}</div>
-                <div class="cell">{{ $recurrence->counter }}</div>
-                <div class="cell">{{ $recurrence->times }}</div>
+                <div data-label="Nome" class="cell">{{ $recurrence->budget->name }}</div>
+                <div data-label="Data" class="cell">{{ date('d/m/Y', strtotime($recurrence->date)) }}</div>
+                <div data-label="Frequência" class="cell">{{ App\Utils\RecurrenceUtils::formatFrequency($recurrence->frequency) }}</div>
+                <div data-label="Última execução" class="cell">{{ $recurrence->counter }}</div>
+                <div data-label="Total de execuções"class="cell">{{ $recurrence->times }}</div>
                 <div class="cell cell-actions">
                     <a class="cell-action" href="{{ route('recurrence.edit', $recurrence->id) }}" data-tooltip="Editar"><i class="fi fi-rs-edit"></i></a>
                 </div>

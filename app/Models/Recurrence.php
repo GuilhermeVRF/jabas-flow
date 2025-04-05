@@ -10,5 +10,11 @@ class Recurrence extends Model
         'date',
         'times',
         'frequency',
+        'counter'
     ];
+
+    public function budget()
+    {
+        return $this->hasOne(Budget::class);
+    }
 }

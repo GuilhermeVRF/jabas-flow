@@ -44,7 +44,7 @@
             </div>
             <div class="form-group">
                 <label for="description">Descrição</label>
-                <textarea name="description" id="description" class="form-control" placeholder="Descrição" value={{ $budget->description }}></textarea>
+                <textarea name="description" id="description" class="form-control" placeholder="Descrição">{{ $budget->description }}</textarea>
             </div>
 
             <div class="form-group">

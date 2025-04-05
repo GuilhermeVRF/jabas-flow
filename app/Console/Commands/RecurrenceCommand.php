@@ -48,7 +48,7 @@ class RecurrenceCommand extends Command
 
                 $counter = $recurrence->counter + 1;
                 $recurrence->update([
-                    'count' => $counter,
+                    'counter' => $counter,
                 ]);
 
                 Budget::create([

@@ -20,5 +20,12 @@
                 <span class="sidebar-item__text">Categorias</span>
             </a>
         </li>
+
+        <li class="sidebar-item {{ Route::is('recurrence.*') ? 'active' : '' }}">
+            <a class="sidebar-item__link" href="{{ route('recurrence.index') }}">
+                <i class="fi fi-rs-category"></i>
+                <span class="sidebar-item__text">Recorrências</span>
+            </a>
+        </li>
     </ul>
 </aside>

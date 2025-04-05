@@ -1,0 +1,14 @@
+.recurrencesContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 60px;
+    gap: 50px;
+}
+
+.recurrences-title{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+

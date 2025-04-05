@@ -9,6 +9,7 @@ use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\BudgetController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\RecurrenceController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -36,4 +37,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/category/edit/{id}', [CategoryController::class, 'edit'])->name('category.edit');
     Route::put('/category/update/{id}', [CategoryController::class, 'update'])->name('category.update');
     Route::get('/category/destroy/{id}', [CategoryController::class, 'destroy'])->name('category.destroy');
+    Route::get('/recurrences', [RecurrenceController::class, 'index'])->name('recurrence.index');
+    Route::get('/recurrence/edit/{id}', [RecurrenceController::class, 'edit'])->name('recurrence.edit');
 });

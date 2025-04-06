@@ -18,7 +18,7 @@
                 <div class="cell" data-label="Cor">
                     <div class="color-box" style="background-color: {{ $category->color }}"></div>
                 </div>
-                <div class="cell" data-label="Orçamentos relacionados">{{ $categoriesRelatedToBudgetsCount[$category->name] }}</div>
+                <div class="cell" data-label="Orçamentos">{{ $categoriesRelatedToBudgetsCount[$category->name] }}</div>
                 <div class="cell" data-label="Data de criação">{{ $category->created_at->format('d/m/Y') }}</div>
                 <div class="cell cell-actions">
                     <a class="cell-action" href="{{ route('category.edit', $category->id) }}" data-tooltip="Editar"><i class="fi fi-rs-edit"></i></a>

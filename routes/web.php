@@ -9,6 +9,7 @@ use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\BudgetController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\GraphController;
 use App\Http\Controllers\RecurrenceController;
 
 Route::get('/', function () {
@@ -40,4 +41,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/recurrences', [RecurrenceController::class, 'index'])->name('recurrence.index');
     Route::get('/recurrence/edit/{id}', [RecurrenceController::class, 'edit'])->name('recurrence.edit');
     Route::put('/recurrence/update/{id}', [RecurrenceController::class, 'update'])->name('recurrence.update');
+    Route::get('/graphs', [GraphController::class, 'index'])->name('graph.index');
+    Route::get('/graphs/income-x-expense', [GraphController::class, 'generateIncomeXExpenseGraph'])->name('graph.income-x-expense');
 });

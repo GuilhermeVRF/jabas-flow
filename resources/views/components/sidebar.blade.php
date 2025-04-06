@@ -27,5 +27,12 @@
                 <span class="sidebar-item__text">Recorrências</span>
             </a>
         </li>
+
+        <li class="sidebar-item {{ Route::is('graph.*') ? 'active' : '' }}">
+            <a class="sidebar-item__link" href="{{ route('graph.index') }}">
+                <i class="fi fi-rs-chart-pie-simple-circle-dollar"></i>
+                <span class="sidebar-item__text">Gráficos</span>
+            </a>
+        </li>
     </ul>
 </aside>

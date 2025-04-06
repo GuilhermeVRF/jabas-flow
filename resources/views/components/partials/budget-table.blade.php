@@ -25,7 +25,9 @@
                     </span>
                 </div>
                 <div class="cell" data-label="Valor">R$ {{ number_format($budget->amount, 2, ',', '.') }}</div>
-                <div class="cell" data-label="Categoria" style="color: {{ $budget->category->color ?? '#000000 '}}">{{ $budget->category->name ?? '' }}</div>
+                <div class="cell" data-label="Categoria">
+                    <span style="color: {{ $budget->category->color ?? '#000000 '}}">{{ $budget->category->name ?? '' }}</span>
+                </div>
                 <div class="cell" data-label="Data">{{ date('d/m/Y', strtotime($budget->billing_date)) }}</div>
                 <div class="cell" data-label="Status">
                     <span class="budget-status {{ strtolower($budget->status) }}">

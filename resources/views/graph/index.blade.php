@@ -16,6 +16,14 @@
             <a class="graph-option" href="{{ route('graph.income-x-expense') }}">
                 <h3>Receita X Despesa</h3>
             </a>
+
+            <a class="graph-option" href="{{ route('graph.income-evolution') }}">
+                <h3>Receita ao longo dos meses</h3>
+            </a>
+
+            <a class="graph-option" href="{{ route('graph.expense-evolution') }}">
+                <h3>Despesa ao longo dos meses</h3>
+            </a>
             <!-- <div class="graph-option">
                 <h3>Evolução da Receita</h3>
             </div>

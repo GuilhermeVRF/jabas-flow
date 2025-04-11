@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Receitas X Despesas')
+@section('title', 'Receita ao longo dos meses')
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset('css/views/graph/graph.css') }}">
@@ -9,10 +9,8 @@
 @section('content')
     <div class="graphsContainer">
         <div class="graphs-title">
-            <h1>Receitas X Despesas</h1>
+            <h1>Receita ao longo dos meses</h1>
         </div>
-
-        <x-partials.graphs-filters :month="$month" />
 
         @if($graph)
             {!! $graph !!}

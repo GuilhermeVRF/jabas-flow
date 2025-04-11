@@ -43,4 +43,6 @@ Route::middleware('auth')->group(function () {
     Route::put('/recurrence/update/{id}', [RecurrenceController::class, 'update'])->name('recurrence.update');
     Route::get('/graphs', [GraphController::class, 'index'])->name('graph.index');
     Route::get('/graphs/income-x-expense', [GraphController::class, 'generateIncomeXExpenseGraph'])->name('graph.income-x-expense');
+    Route::get('/graphs/income-evolution', [GraphController::class, 'generateIncomeEvolutionGraph'])->name('graph.income-evolution');
+    Route::get('/graphs/expense-evolution', [GraphController::class, 'generateExpenseEvolutionGraph'])->name('graph.expense-evolution');
 });

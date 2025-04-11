@@ -18,7 +18,7 @@ class GraphController extends Controller
         return $this->graphService->index();
     }
 
-    public function generateIncomeXExpenseGraph(){
-        return $this->graphService->generateIncomeXExpenseGraph();
+    public function generateIncomeXExpenseGraph(Request $request){
+        return $this->graphService->generateIncomeXExpenseGraph($request);
     }
 }

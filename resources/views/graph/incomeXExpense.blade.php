@@ -12,8 +12,10 @@
             <h1>Receitas X Despesas</h1>
         </div>
 
+        <x-partials.graphs-filters :month="$month" />
+
         @if($graph)
-            <img src="data:image/png;base64,{{ $graph }}" alt="Gráfico gerado" width="500"/>
+            {!! $graph !!}
         @else
             <div class="no-graph">
                 <h3>Não foi possível gerar o gráfico!</h3>

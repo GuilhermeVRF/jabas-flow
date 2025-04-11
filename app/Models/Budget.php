@@ -36,5 +36,11 @@ class Budget extends Model
         return $this->belongsTo(Recurrence::class);
     }
 
+    public function scopeFilterByDateAndType($query, $userId, $type, $start, $end)
+    {
+        return $query->where('user_id', $userId)
+            ->where('type', $type)
+            ->whereBetween('billing_date', [$start, $end]);
+    }
 
 }

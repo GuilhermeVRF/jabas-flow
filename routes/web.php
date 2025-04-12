@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 // Auth Controllers
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\UserController;
+use App\Http\Controllers\Auth\UserSettingsController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\BudgetController;
 use App\Http\Controllers\CategoryController;
@@ -42,7 +43,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/recurrence/edit/{id}', [RecurrenceController::class, 'edit'])->name('recurrence.edit');
     Route::put('/recurrence/update/{id}', [RecurrenceController::class, 'update'])->name('recurrence.update');
     Route::get('/graphs', [GraphController::class, 'index'])->name('graph.index');
-    Route::get('/graphs/income-x-expense', [GraphController::class, 'generateIncomeXExpenseGraph'])->name('graph.income-x-expense');
-    Route::get('/graphs/income-evolution', [GraphController::class, 'generateIncomeEvolutionGraph'])->name('graph.income-evolution');
-    Route::get('/graphs/expense-evolution', [GraphController::class, 'generateExpenseEvolutionGraph'])->name('graph.expense-evolution');
+    Route::get('/graph/income-x-expense', [GraphController::class, 'generateIncomeXExpenseGraph'])->name('graph.income-x-expense');
+    Route::get('/graph/income-evolution', [GraphController::class, 'generateIncomeEvolutionGraph'])->name('graph.income-evolution');
+    Route::get('/graph/expense-evolution', [GraphController::class, 'generateExpenseEvolutionGraph'])->name('graph.expense-evolution');
+    Route::get('/graphs/spending-by-categories', [GraphController::class, 'generateCategoriesWithMostSpendingGraph'])->name('graph.spending-by-categories');
+    Route::get('/user/settings', [UserSettingsController::class, 'index'])->name('user.settings.index');
+    Route::post('/user/settings/update', [UserSettingsController::class, 'update'])->name('user.settings.update');
 });

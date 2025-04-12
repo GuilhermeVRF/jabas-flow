@@ -1,0 +1,41 @@
+.userSettingsContainer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    padding: 60px;
+}
+
+.userSettingsForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 75%;
+    height: 50%;
+}
+
+.userSettingsForm h1{
+    display: flex;
+    justify-content: start;
+    width: 100%;
+}
+
+@media screen and (max-width: 1280px) {
+    .userSettingsContainer{
+        padding: 10px;
+    }
+
+    .userSettingsForm{
+        width: 100%;
+        height: 100%;
+    }
+
+    .userSettingsForm h1{
+        font-size: 1.5rem;
+    }
+}

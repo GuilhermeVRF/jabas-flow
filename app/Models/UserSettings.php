@@ -16,6 +16,10 @@ class UserSettings extends Model
         'email_notifications',
     ];
 
+    protected $casts = [
+        'email_notifications' => 'boolean',
+    ];
+
     /**
      * Relação com o usuário.
      */

@@ -19,6 +19,12 @@
     height: 50%;
 }
 
+.upsertCategoryForm h1{
+    display: flex;
+    justify-content: start;
+    width: 100%;
+}
+
 @media screen and (max-width: 1280px) {
     .upsertCategoryContainer{
         padding: 10px;

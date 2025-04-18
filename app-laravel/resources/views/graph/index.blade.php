@@ -21,6 +21,14 @@
                 <span class="graph-option-description">Veja o comparativo</span>
             </a>
 
+            <a class="graph-option" href="{{ route('graph.spending-by-categories') }}">
+                <h3 class="graph-option-title">
+                    <i class="fi fi-rs-stats"></i>
+                    Gastos por categorias
+                </h3>
+                <span class="graph-option-description">Veja o comparativo</span>
+            </a>
+
             <a class="graph-option" href="{{ route('graph.income-evolution') }}">
                 <h3 class="graph-option-title income">
                     <i class="fi fi-rs-chart-line-up"></i>
@@ -36,13 +44,6 @@
                 </h3>
                 <span class="graph-option-description">Evolução mês a mês</span>
             </a>
-            <!-- <div class="graph-option">
-                <h3>Evolução da Receita</h3>
-            </div>
-            <div class="graph-option">
-                <h3>Evolução da Despesa</h3>
-                
-            </div> -->
         </div>
     </div>
 

@@ -29,4 +29,8 @@ class GraphController extends Controller
     public function generateExpenseEvolutionGraph(){
         return $this->graphService->generateExpenseEvolutionGraph();
     }
+
+    public function generateCategoriesWithMostSpendingGraph(){
+        return $this->graphService->generateCategoriesWithMostSpendingGraph();    
+    }
 }

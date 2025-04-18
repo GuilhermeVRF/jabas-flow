@@ -49,6 +49,10 @@ class GraphService{
         ]);     
     }
 
+    public function generateCategoriesWithMostSpendingGraph(){
+
+    }
+
     private function generateGenericTypeEvolutionGraph(string $type, string $endpoint){
         $start = Carbon::now()->startOfYear(); 
         $end = Carbon::now()->startOfMonth(); 

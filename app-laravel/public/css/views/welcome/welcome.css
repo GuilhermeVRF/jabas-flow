@@ -1,0 +1,81 @@
+.welcomeContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 80px;
+    gap: 20px;
+}
+
+.welcomeTitle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcomeTitle h3{
+    color: #191E26;
+}
+
+.imageContainer{
+    width: 500px;
+}
+
+.welcomeFeature{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap: 20px;
+}
+
+.cardFeature{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    border-radius: 5px;
+    border: solid 1px #ddd;
+    padding: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+}
+
+.cardFeature:hover {
+    transform: scale(1.02);
+}
+
+.cardFeature i {
+    font-size: 2rem;
+    color: #118B50;
+}
+
+.cardFeature {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.welcomeCallToAction {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 2rem 0 1rem;
+    color: #333;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media screen and (max-width: 1278px) {
+    .imageContainer{
+        width: 50%;
+    }
+
+    .welcomeFeature{
+        grid-template-columns: 1fr;
+    }
+}

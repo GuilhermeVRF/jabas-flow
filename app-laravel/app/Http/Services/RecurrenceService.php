@@ -17,7 +17,7 @@ class RecurrenceService{
                 $query->where('name', 'LIKE', "$search%");
             }
         })
-        ->get();
+        ->paginate(10);
 
         return view('recurrence.index', [
             'recurrences' => $recurrences,

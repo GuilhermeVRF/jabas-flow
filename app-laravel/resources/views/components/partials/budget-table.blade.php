@@ -44,3 +44,4 @@
             </div>
         @endforeach
 </div>
+{{ $budgets->links('components.pagination') }}

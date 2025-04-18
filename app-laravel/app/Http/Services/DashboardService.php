@@ -18,7 +18,7 @@ class DashboardService{
         $endOfLastMonth = Carbon::now()->subMonth()->endOfMonth();
 
         $budgetsQuery = $this->getBudgetsQuery($userId, $search, $startOfMonth, $endOfMonth);
-        $budgets = $budgetsQuery->orderBy('amount', 'desc')->get();
+        $budgets = $budgetsQuery->orderBy('amount', 'desc')->paginate(10);
         $totalIncomeAmount = (clone $budgetsQuery)->where('type', 'income')->sum('amount');
         $totalExpenseAmount = (clone $budgetsQuery)->where('type', 'expense')->sum('amount');
         

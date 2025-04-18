@@ -25,6 +25,11 @@
                 <input type="password" id="password" name="password" class="form-control" required placeholder="Digite sua senha">
             </div>
 
+            <div class="form-group-row">
+                <input type="checkbox" name="rememberMe" id="rememberMe">
+                <label class="label"  for="rememberMe">Lembrar de mim</label>
+            </div>
+
             <div class="form-group">
                 <input type="submit" value="Entrar" class="btn submitBtn">
             </div>

@@ -25,7 +25,7 @@ class LoginService{
 
         // Verificar se o email está verificado ?
 
-        Auth::login($user);
+        Auth::login($user, $request->rememberMe);
 
         return redirect()->route('dashboard')->with('success', 'Login efetuado com sucesso');
     }

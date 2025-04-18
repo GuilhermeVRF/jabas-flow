@@ -11,7 +11,7 @@
         $user = auth()->user() ?? null;
     @endphp
 
-    @if($user && !Route::is('login', 'register'))
+    @if($user && !Route::is('login', 'register', 'welcome'))
     <span>{{ $user->name }}</span>
     @endif
 </header>

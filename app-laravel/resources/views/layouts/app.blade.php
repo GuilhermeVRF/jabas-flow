@@ -19,6 +19,7 @@
     @if (session('success'))
         <x-popup status="success" message="{{ session('success') }}" />
     @endif
+    <x-header />
     <main>
         <div class="content">
             <x-sidebar />

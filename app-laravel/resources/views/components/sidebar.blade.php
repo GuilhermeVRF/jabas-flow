@@ -3,9 +3,6 @@
 @endpush
 
 <aside>
-    <div class="sidebar-header">
-        <img class="sidebar-header__logo" src="{{ asset('images/logo-small.png') }}" alt="Logo">
-    </div>
     <ul class="sidebar-list">
         <li class="sidebar-item {{ Route::is('dashboard', 'budget.*') ? 'active' : '' }}">
             <a class="sidebar-item__link" href="{{ route('dashboard') }}">

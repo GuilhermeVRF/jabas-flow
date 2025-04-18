@@ -27,4 +27,4 @@
             </div>
         @endforeach
 </div>
-{{ $categories->links('components.pagination') }}
+{{ $categories->withQueryString()->links('components.pagination') }}

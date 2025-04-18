@@ -6,7 +6,7 @@
 <div id="showDashboardFilterPopup" class="overlay">
     <div class="modal">
         <button id="closeDashboardFilterPopup" class="close-btn">✖</button>
-        <form class="dashboardFilter-popup__content" method="GET" action="">
+        <form class="dashboardFilter-popup__content" method="GET" action="{{ url()->current() }}">
             <h2>Aplicar filtros</h2>
             <div class="form-group">
                 <label class="label" for="month">Filtrar por mês</label>

@@ -25,4 +25,4 @@
             </div>
         @endforeach
 </div>
-{{ $recurrences->links('components.pagination') }}
+{{ $recurrences->withQueryString()->links('components.pagination') }}

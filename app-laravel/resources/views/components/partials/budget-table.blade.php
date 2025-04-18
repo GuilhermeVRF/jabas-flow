@@ -44,4 +44,4 @@
             </div>
         @endforeach
 </div>
-{{ $budgets->links('components.pagination') }}
+{{ $budgets->withQueryString()->links('components.pagination') }}

@@ -8,14 +8,15 @@ use Illuminate\Http\Request;
 
 class DashboardService{
     public function index(Request $request){
+        $month = $request->input('month') ?? Carbon::now()->month;
         $search = $request->input('search');
         $userId = auth()->id();
 
-        $startOfMonth = Carbon::now()->startOfMonth();
-        $endOfMonth = Carbon::now()->endOfMonth();
+        $startOfMonth = Carbon::createFromDate(null, $month, 1)->startOfMonth();
+        $endOfMonth = Carbon::createFromDate(null, $month, 1)->endOfMonth();
          
-        $startOfLastMonth = Carbon::now()->subMonth()->startOfMonth();
-        $endOfLastMonth = Carbon::now()->subMonth()->endOfMonth();
+        $startOfLastMonth = $startOfMonth->subMonth()->startOfMonth();
+        $endOfLastMonth = $startOfMonth->subMonth()->endOfMonth();
 
         $budgetsQuery = $this->getBudgetsQuery($userId, $search, $startOfMonth, $endOfMonth);
         $budgets = $budgetsQuery->orderBy('amount', 'desc')->paginate(10);
@@ -29,6 +30,7 @@ class DashboardService{
         $incomeVariation = $this->getBudgetVariation($totalIncomeAmount, $lastMonthIncome);
         
         return view('dashboard', [
+            'month' => $month,
             'budgets' => $budgets,
             'search' => $search,
             'totalExpenseAmount' => number_format($totalExpenseAmount, 2, ',', '.'),

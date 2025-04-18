@@ -4,9 +4,7 @@ namespace App\Utils;
 
 class Utils
 {
-    public static function getPortugueseActualMonth()
-    {
-        $monthNumber = date('n');
+    public static function getPortugueseMonth($monthNumber){
         switch ($monthNumber) {
             case 1: return 'Janeiro';
             case 2: return 'Fevereiro';

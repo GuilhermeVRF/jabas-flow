@@ -6,4 +6,12 @@
     <div class="logo">
         <img src="{{ asset('images/logo.png') }}" alt="Logo">
     </div>
+
+    @php 
+        $user = auth()->user() ?? null;
+    @endphp
+
+    @if($user && !Route::is('login', 'register'))
+    <span>{{ $user->name }}</span>
+    @endif
 </header>

@@ -1,0 +1,30 @@
+.paginationContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.paginationLink{
+    padding: 10px;
+    font-size: 2rem;
+    color: #118B50;
+}
+
+.paginationNumbersContainer{
+    display: flex;
+    gap: 10px;
+}
+
+.paginationNumber{
+    padding: 5px;
+}
+
+.current{
+    border-radius: 5px;
+    color: white;
+    background-color: #118B50;    
+}
+
+.disabled{
+    color: lightgray;
+}

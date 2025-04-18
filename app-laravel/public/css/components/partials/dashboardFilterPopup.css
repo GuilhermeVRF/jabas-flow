@@ -1,0 +1,8 @@
+.dashboardFilter-popup__content{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    font-size: 1.2em;
+}

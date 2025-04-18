@@ -9,11 +9,16 @@
             <div class="form-group">
                 <input type="text" id="search" name="search" class="form-control" placeholder="Pesquisar por Nome..." value="{{ $search }}">
             </div>    
+
             <button type="submit" class="btn-small submitBtn"><i class="fi fi-rs-search"></i></button>
         </form>
 
-        <button class="btn-small secondaryBtn"><i class="fi fi-rs-filter"></i></button>
+        <button id="filter" class="btn-small secondaryBtn"><i class="fi fi-rs-filter"></i></button>
     </div>
     
     <a href="{{ route('budget.create') }}" class="btn submitBtn">Adicionar Orçamento</a>
 </div>
+
+@push('scripts')
+    <script src="{{ asset('js/components/partials/dashboardFilter.js') }}" defer></script>
+@endpush

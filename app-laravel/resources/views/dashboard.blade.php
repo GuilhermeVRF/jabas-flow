@@ -9,7 +9,7 @@
 @section('content')
     <div class="dashboardContainer">
         <div class="dashboard-title">
-            <h1>Dashboard - {{ App\Utils\Utils::getPortugueseActualMonth() }}</h1>   
+            <h1>Dashboard - {{ App\Utils\Utils::getPortugueseMonth($month) }}</h1>   
         </div>
 
         <x-partials.dashboard-summary 
@@ -29,5 +29,6 @@
         </div>
 
         <x-partials.show-budget />
+        <x-partials.dashboard-filter-popup :month="$month"/>
     </div>
 @endsection

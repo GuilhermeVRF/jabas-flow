@@ -27,3 +27,4 @@
             </div>
         @endforeach
 </div>
+{{ $categories->links('components.pagination') }}

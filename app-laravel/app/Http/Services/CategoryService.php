@@ -15,7 +15,7 @@ class CategoryService{
             return $query->where('name', 'LIKE', "%$search%");
         })
         ->orderBy('name', 'ASC')
-        ->get();
+        ->paginate(10);
 
         $categoriesRelatedToBudgetsCount = $this->getCategoriesRelatedToBudgetsCount($search);
 

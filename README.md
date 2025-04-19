@@ -1,58 +1,61 @@
-Jabas Flow
+# Jabas Flow
 
-Sobre o Projeto
+<div align="center">
+  <img src="https://raw.githubusercontent.com/GuilhermeVRF/jabas-flow/main/public/logo.png" alt="Jabas Flow Logo" height="200" />
+</div>
 
-Jabas Flow é um sistema de controle financeiro pessoal baseado em uma arquitetura de microserviços. Ele foi desenvolvido para ajudar usuários a organizarem suas finanças de maneira eficiente e automatizada.
+## Sobre o Projeto
 
-O sistema permite o cadastro de receitas e despesas, vinculação de orçamentos a categorias e configuração de recorrências. Quando uma recorrência é gerada, o sistema envia um e-mail automático como lembrete para o usuário.
+**Jabas Flow** é um sistema de controle financeiro pessoal baseado em uma arquitetura de **microserviços**. Ele foi desenvolvido para ajudar usuários a organizarem suas finanças de maneira eficiente e automatizada.
 
-Além disso, os usuários podem visualizar gráficos financeiros gerados via Python com Flask, tornando a análise de dados clara e intuitiva.
+O sistema permite o cadastro de receitas e despesas, vinculação de orçamentos a categorias e configuração de **recorrências**. Quando uma recorrência é gerada, o sistema envia um **e-mail automático** como lembrete para o usuário.
 
-Funcionalidades
+Além disso, os usuários podem visualizar **gráficos financeiros** gerados via Python com Flask, tornando a análise de dados clara e intuitiva.
 
-📅 Cadastro de Receitas e Despesas
+## Funcionalidades
 
-📆 Orçamentos por Categoria
+- 📅 Cadastro de **Receitas e Despesas**
+- 📆 **Orçamentos por Categoria**
+- ⏳ **Recorrências** com notificação por e-mail
+- 📊 **Gráficos Financeiros** com Flask e Python
 
-⏳ Recorrências com notificação por e-mail
+## Tecnologias Utilizadas
 
-📊 Gráficos Financeiros com Flask e Python
+- **Backend**: Laravel (PHP)
+- **Microserviço de Gráficos**: Flask (Python)
+- **Banco de Dados**: MySQL
+- **Ambiente**: Docker
 
-Tecnologias Utilizadas
+## Como Rodar o Projeto
 
-Backend: Laravel (PHP)
+1. Clone o repositório:
 
-Microserviço de Gráficos: Flask (Python)
-
-Banco de Dados: MySQL
-
-Ambiente: Docker
-
-Repositório
-
-🔗 Acesse o repositório no GitHub
-
-Como Rodar o Projeto
-
-Clone o repositório:
-
+```bash
 git clone https://github.com/GuilhermeVRF/jabas-flow.git
 cd jabas-flow
+```
 
-Inicie os containers com Docker:
+2. Inicie os containers com Docker:
 
+```bash
 docker compose up
+```
 
-Acesse a pasta da aplicação Laravel:
+3. Acesse a pasta da aplicação Laravel:
 
+```bash
 cd app-laravel
+```
 
-Execute as migrações do banco:
+4. Execute as migrações do banco:
 
+```bash
 php artisan migrate
+```
 
-Inicie o servidor Laravel:
+5. Inicie o servidor Laravel:
 
+```bash
 php artisan serve
-
+```
 

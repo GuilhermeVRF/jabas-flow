@@ -4,6 +4,8 @@ namespace App\Console\Commands;
 
 use App\Models\Budget;
 use App\Models\Recurrence;
+use App\Models\User;
+use App\Notifications\SendRecurrenceEmail;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Log;
 use Carbon\Carbon;
@@ -32,8 +34,9 @@ class RecurrenceCommand extends Command
         $recurrences = Recurrence::with('budget')->get()->groupBy(function ($recurrence) {
             return optional($recurrence->budget)->user_id;
         });
-
+        
         foreach($recurrences as $userId => $recurrenceGroup) {
+            $sendRecurrencesEmail = [];
             foreach ($recurrenceGroup as $recurrence) {
                 $nextDate = $this->handleBudgetFrequency($recurrence->frequency, $recurrence->date);
 
@@ -45,6 +48,8 @@ class RecurrenceCommand extends Command
                 if ($budgetAlreadyExists) {
                     continue;
                 }
+
+                $sendRecurrencesEmail[] = $recurrence;
 
                 $counter = $recurrence->counter + 1;
                 $recurrence->update([
@@ -62,6 +67,11 @@ class RecurrenceCommand extends Command
                     'category_id' => $recurrence->budget->category_id,
                     'recurrence_id' => $recurrence->id,
                 ]);
+            }
+
+            $user = User::where('id', $userId)->with('settings')->first();
+            if(!empty($sendRecurrencesEmail) && $user->settings->email_notifications){
+                $user->notify(new SendRecurrenceEmail($sendRecurrencesEmail, $user));
             }
         }
     }

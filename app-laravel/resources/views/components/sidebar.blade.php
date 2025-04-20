@@ -31,7 +31,9 @@
                 <span class="sidebar-item__text">Gráficos</span>
             </a>
         </li>
+    </ul>
 
+    <ul class="sidebar-list-footer">
         <li class="sidebar-item {{ Route::is('user.settings.index') ? 'active' : '' }}">
             <a class="sidebar-item__link" href="{{ route('user.settings.index') }}">
                 <i class="fi fi-rs-settings"></i>

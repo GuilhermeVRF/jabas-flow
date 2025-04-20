@@ -1,8 +1,11 @@
 aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 300px;
     background-color: #F7F7F7;
     position: fixed; 
-    height: 100vh;
+    height: calc(100vh - 100px);
     overflow-y: auto; 
 }
 
@@ -18,13 +21,18 @@ aside{
     cursor: pointer;
 }
 
-.sidebar-list{
+.sidebar-list, .sidebar-list-footer{
     display: flex;
     flex-direction: column;
     list-style: none;
     padding: 0;
     margin: 0;
     padding: 10px;
+}
+
+.sidebar-list-footer{
+    border-top: solid 1px #E0E0E0; 
+    padding-top: 10px;   
 }
 
 .sidebar-item{

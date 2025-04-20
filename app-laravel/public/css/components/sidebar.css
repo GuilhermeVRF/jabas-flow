@@ -9,18 +9,6 @@ aside{
     overflow-y: auto; 
 }
 
-.sidebar-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: solid 1px #E0E0E0;
-    padding: 10px;
-}
-
-.sidebar-header__minimize{
-    cursor: pointer;
-}
-
 .sidebar-list, .sidebar-list-footer{
     display: flex;
     flex-direction: column;

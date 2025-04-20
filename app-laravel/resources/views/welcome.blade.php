@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{ asset('css/views/welcome/welcome.css') }}">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css'>
     <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+    <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
     <title>Bem vindo</title>
 </head>
 <body>

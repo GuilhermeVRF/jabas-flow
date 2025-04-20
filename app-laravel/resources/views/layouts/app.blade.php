@@ -21,8 +21,9 @@
     @endif
     <x-header />
     <main>
+        <x-sidebar />
         <div class="content">
-            <x-sidebar />
+            
             @yield('content')
         </div>
     </main>

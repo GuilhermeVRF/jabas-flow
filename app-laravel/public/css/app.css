@@ -193,12 +193,6 @@ i{
   input:checked + .slider:before {
     transform: translateX(24px);
   }
-  
-
-/* Estilo quando o input está em foco */
-.form-control:focus { 
-    outline: none; 
-}
 
 /* Estilo para placeholders */
 .form-control::placeholder {

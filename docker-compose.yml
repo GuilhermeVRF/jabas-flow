@@ -18,15 +18,5 @@ services:
     restart: unless-stopped
     volumes:
       - ./graph-flask:/app
-      
-  nlp-service:
-    build:
-      context: ./nlp-flask
-    ports:
-      - "6001:6001"
-    restart: unless-stopped
-    volumes:
-      - ./nlp-flask:/app
-
 volumes:
   mysql_data:

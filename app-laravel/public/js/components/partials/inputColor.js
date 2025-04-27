@@ -4,6 +4,10 @@ const colorOptions = document.querySelector('.color-options');
 const colors = document.querySelectorAll('.color-option');
 const customColorOption = document.getElementById('customColorOption');
 
+function setColor(color){
+    colorInput.value = color;
+}
+
 // Alternar visibilidade das opções de cor
 colorPickerBtn.addEventListener('click', function(event) {
     // Evitar que o clique no botão feche o colorOptions
@@ -52,7 +56,7 @@ pickr.on('save', (color) => {
         customColorOption.parentNode.insertBefore(newOption, customColorOption);   
     }
     
-    colorInput.value = selectedColor;
+    setColor(selectedColor);
     pickr.hide();
 });
 
@@ -69,6 +73,7 @@ colors.forEach(option => {
         }else{
             const selectedColor = this.getAttribute('data-color');
             pickr.setColor(selectedColor);
+            setColor(selectedColor);
             colorInput.value = selectedColor;
         }
         

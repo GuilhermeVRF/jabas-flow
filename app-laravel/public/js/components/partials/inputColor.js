@@ -47,14 +47,6 @@ document.querySelector('.pcr-save').value = "Salvar";
 pickr.on('save', (color) => {
     const selectedColor = color.toHEXA().toString(); 
     const existingOption = Array.from(colors).find(colorOption => colorOption.getAttribute('data-color') === selectedColor);
-
-    if(!existingOption){
-        const newOption = document.createElement('div');
-        newOption.className = 'color-option';
-        newOption.setAttribute('data-color', selectedColor);
-        newOption.style.backgroundColor = selectedColor;
-        customColorOption.parentNode.insertBefore(newOption, customColorOption);   
-    }
     
     setColor(selectedColor);
     pickr.hide();
@@ -74,7 +66,6 @@ colors.forEach(option => {
             const selectedColor = this.getAttribute('data-color');
             pickr.setColor(selectedColor);
             setColor(selectedColor);
-            colorInput.value = selectedColor;
         }
         
         colorOptions.style.display = "none";

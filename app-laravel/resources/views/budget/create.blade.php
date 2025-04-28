@@ -51,11 +51,14 @@
                     <option value="paid">Pago</option>
                 </select>
             </div>
-
-            <div>
-                <label for="isRecurrence">Pagamento recorrente</label>
-                <input type="hidden" name="isRecurrence" value="0">
-                <input type="checkbox" id="isRecurrence">
+            
+            <div class="form-group-row">
+                <label for="email_notifications">Pagamento recorrente</label>
+                <label class="form-switch">
+                    <input type="hidden" name="isRecurrence" value="0">
+                    <input type="checkbox" id="isRecurrence">
+                    <span class="slider"></span>
+                </label>
             </div>
 
             <div id="recurrenceContainer" class="recurrenceContainer" style="display: none;">

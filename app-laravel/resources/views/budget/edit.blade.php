@@ -55,10 +55,13 @@
                 </select>
             </div>
 
-            <div>
-                <label for="isRecurrence">Pagamento recorrente</label>
-                <input type="hidden" name="isRecurrence" value="{{ !empty($budget->recurrence) ? true : false }}">
-                <input type="checkbox" id="isRecurrence" {{ !empty($budget->recurrence) ? 'checked' : '' }}>
+            <div class="form-group-row">
+                <label for="email_notifications">Pagamento recorrente</label>
+                <label class="form-switch">
+                    <input type="hidden" name="isRecurrence" value="{{ !empty($budget->recurrence) ? true : false }}">
+                    <input type="checkbox" id="isRecurrence" {{ !empty($budget->recurrence) ? 'checked' : '' }}>
+                    <span class="slider"></span>
+                </label>
             </div>
 
             <input type="hidden" name="recurrenceId" value="{{ $budget->recurrence->id ?? '' }}">

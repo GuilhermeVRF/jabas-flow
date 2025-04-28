@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Criar Orçamento')
+
 @push('styles')
     <link rel="stylesheet" href="{{ asset('css/views/budget/upsert.css') }}">
 @endpush

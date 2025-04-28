@@ -27,9 +27,16 @@ class CategoryService{
     }
 
     public function create(){
-        $previewUserColors = Category::where('user_id', auth()->user()->id)->distinct()->pluck('color')->toArray();
+        $userCategories = Category::where('user_id', auth()->user()->id)->get();
+        $previewUserColors = $userCategories->pluck('color')->unique()->values()->toArray();
+        $userCategoriesNames = $userCategories->pluck('name')->values()->toArray();
+
+        $preRegisteredCategories = config('categories');
         return view('category.create', [
+            'userCategories' => $userCategories,
             'previewUserColors' => $previewUserColors,
+            'userCategoriesNames' => $userCategoriesNames,
+            'preRegisteredCategories' => $preRegisteredCategories
         ]);
     }
 

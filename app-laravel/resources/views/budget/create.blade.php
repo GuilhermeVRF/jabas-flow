@@ -26,7 +26,7 @@
 
             <div class="form-group">
                 <label for="amount">Valor</label>
-                <input type="number" class="form-control" id="amount" name="amount" placeholder="R$13,00">
+                <input type="number" class="form-control" id="amount" name="amount" placeholder="R$13,00" step="0.01">
             </div>
             <div class="form-group">
                 <label for="category">Categoria</label>

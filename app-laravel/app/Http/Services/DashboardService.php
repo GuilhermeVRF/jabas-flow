@@ -19,7 +19,7 @@ class DashboardService{
         $endOfLastMonth = $startOfMonth->subMonth()->endOfMonth();
 
         $budgetsQuery = $this->getBudgetsQuery($userId, $search, $startOfMonth, $endOfMonth);
-        $budgets = $budgetsQuery->orderBy('amount', 'desc')->paginate(10);
+        $budgets = $budgetsQuery->orderBy('type', 'desc')->orderBy('amount', 'desc')->paginate(10);
         $totalIncomeAmount = (clone $budgetsQuery)->where('type', 'income')->sum('amount');
         $totalExpenseAmount = (clone $budgetsQuery)->where('type', 'expense')->sum('amount');
         

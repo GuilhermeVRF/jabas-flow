@@ -14,9 +14,9 @@ class DashboardService{
 
         $startOfMonth = Carbon::createFromDate(null, $month, 1)->startOfMonth();
         $endOfMonth = Carbon::createFromDate(null, $month, 1)->endOfMonth();
-         
-        $startOfLastMonth = $startOfMonth->subMonth()->startOfMonth();
-        $endOfLastMonth = $startOfMonth->subMonth()->endOfMonth();
+
+        $startOfLastMonth = $startOfMonth->copy()->subMonth()->startOfMonth();
+        $endOfLastMonth = $startOfMonth->copy()->subMonth()->endOfMonth();
 
         $budgetsQuery = $this->getBudgetsQuery($userId, $search, $startOfMonth, $endOfMonth);
         $budgets = $budgetsQuery->orderBy('type', 'desc')->orderBy('amount', 'desc')->paginate(10);

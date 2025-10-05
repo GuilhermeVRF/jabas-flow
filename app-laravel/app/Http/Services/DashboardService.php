@@ -5,10 +5,13 @@ namespace App\Http\Services;
 use App\Models\Budget;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class DashboardService{
     public function index(Request $request){
-        $month = $request->input('month') ?? Carbon::now()->month;
+        $month = $request->input('month') ?? Session::get('selected_month', Carbon::now()->month);
+        Session::put('selected_month', $month);
+
         $search = $request->input('search');
         $userId = auth()->id();
 

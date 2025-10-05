@@ -34,5 +34,5 @@
 </div>
 
 @push('scripts')
-    
+    <script src="{{ asset('js/components/partials/dashboardFilterPopup.js') }}" defer></script>
 @endpush

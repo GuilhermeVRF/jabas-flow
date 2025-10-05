@@ -39,7 +39,12 @@
                 <div class="cell cell-actions">
                     <a class="cell-action show-budget" href="#" data-tooltip="Visualizar" data-id="{{ $budget->id }}"><i class="fi fi-rs-eye"></i></a>
                     <a class="cell-action" href="{{ route('budget.edit', $budget->id) }}" data-tooltip="Editar"><i class="fi fi-rs-edit"></i></a>
-                    <a class="cell-action" href="" data-tooltip="Deletar"><i class="fi fi-rs-trash"></i></a>    
+                    <form id="delete-form-{{ $budget->id }}" action="{{ route('budget.destroy', $budget->id) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="cell-action" data-tooltip="Deletar"><i class="fi fi-rs-trash"></i></button>
+                    </form>
+
                 </div>
             </div>
         @endforeach

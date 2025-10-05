@@ -32,4 +32,8 @@ class BudgetController extends Controller
     public function update(BudgetRequest $request, $id){
         return $this->budgetService->update($request, $id);
     }
+
+    public function destroy($id){
+        return $this->budgetService->destroy($id);
+    }
 }

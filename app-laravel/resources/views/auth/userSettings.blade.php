@@ -15,8 +15,8 @@
             <div class="form-group-row">
                 <label for="email_notifications">Enviar e-mail quando uma cobrança recorrente for realizada</label>
                 <label class="form-switch">
-                    <input type="hidden" name="email_notifications" value="{{ ($userSettings->email_notifications === true) ? 1 : 0 }}">
-                    <input type="checkbox" id="email_notifications" @if($userSettings->email_notifications === true) checked @endif">
+                    <input type="hidden" name="email_notifications" value="{{ ($userSettings?->email_notifications === true) ? 1 : 0 }}">
+                    <input type="checkbox" id="email_notifications" @if($userSettings?->email_notifications === true) checked @endif">
                     <span class="slider"></span>
                 </label>
             </div>

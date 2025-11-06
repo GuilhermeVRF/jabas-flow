@@ -89,10 +89,6 @@ class BudgetService
     public function destroy($id){
         $budget = Budget::where('user_id', auth()->user()->id)->with('recurrence')->findOrFail($id);
 
-        if($budget->recurrence){
-            $budget->recurrence->delete();
-        }
-
         $budget->delete();
         return redirect()->route('dashboard')->with('success', 'Registro deletado com sucesso');
     }
